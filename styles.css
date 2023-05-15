@@ -13,7 +13,7 @@ body {
   background-position: center;
   font-family: Arial, sans-serif;
   background-color: #111;
-  color: #dff800;
+  color: #000000;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -114,7 +114,7 @@ nav ul li a::before {
   left: 0;
   width: 0;
   height: 100%;
-  background: #fae311;
+  background: #fae102;
   transition: .5s;
   z-index: -1;
 }
@@ -166,27 +166,30 @@ main {
 .social-section h2 {
   height: auto;
   font-size: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .search-section .search-form {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
 }
 
 .search-section .search-form input {
   flex-grow: 1;
   padding: 10px;
   border: none;
-  border-radius: 5px;
-  width: 400px;
+  border-radius: 50px;
+  width: 50px;
+  font-size: 15px; /* Ajuste o valor do font-size conforme necessário */
 }
+
+
 
 .search-section .search-form button {
   padding: 10px 20px;
   background-color: #c913c9;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   color: #fff;
   cursor: pointer;
 }
@@ -196,8 +199,9 @@ main {
 }
 
 .social-section {
-  margin-top: 300px; /* Adicione uma margem superior para separar da seção anterior */
-  margin-bottom: 10px; /* Reduza a margem inferior para evitar muito espaço em branco */
+  margin-top: 80px; /* Adicione uma margem superior para separar da seção anterior */
+  margin-bottom: 1px; /* Reduza a margem inferior para evitar muito espaço em branco */
+  height: 30px; /* Mantenha a altura */
 }
 
 footer {
@@ -236,8 +240,8 @@ footer {
 
 .social-section .contact-info p {
   margin-bottom: 0;
-  font-size: 14px;
-  color: #aaa;
+  font-size: 15px;
+  color: #000000;
 }
 
 
