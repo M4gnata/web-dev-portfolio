@@ -1,0 +1,219 @@
+/* CSS Licenciado : Lucas Silva Gomes 15198398713*/
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./img/fundo.jpg');
+  background-size: cover; /* ajusta o tamanho da imagem para cobrir todo o fundo */
+  background-position: center; /* centraliza a imagem no fundo */
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #dff800;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .title {
+  font-size: 1px;
+  text-align: center;
+  border-radius: 1px;
+  padding: 0.5px;
+  margin-top: 0.5px;
+  font-family: 'Comic Zine OT', sans-serif;
+}
+
+.container .title.afinado {
+  background-image: url(./img/beat.png);
+  background-size: cover;
+  background-position: center;
+  text-indent: -9999px; /* Oculta o texto do elemento */
+  transform: scale(0.5); /* Aumenta o tamanho da imagem em 2 vezes */
+  width: 800px; /* Defina a largura desejada para o elemento */
+  height: 200px; /* Defina a altura desejada para o elemento */
+}
+
+.container .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -50px; /* Ajuste a margem superior para aproximar o logo */
+  margin-bottom: 10px; /* Ajuste a margem inferior conforme necessário */
+}
+
+.container .logo img {
+  width: 200px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: inline-block;
+  margin-top: 5px;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  border-color: transparent;
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  width: 150px;
+  height: 100%;
+  align-items: center;
+  border: 1px solid hsla(60, 98%, 52%, 0.918);
+  padding: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 19px;
+  font-weight: 600;
+  overflow: hidden;
+  transition: .5s;
+  color: #000000;
+  z-index: 1;
+}
+
+nav ul li a::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #fae311;
+  transition: .5s;
+  z-index: -1;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+main {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+.logo {
+  position: relative;
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.logo img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+
+.search-section h2,
+.social-section h2 {
+  height: auto;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.search-section .search-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-section .search-form input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.search-section .search-form button {
+  padding: 10px 20px;
+  background-color: #c913c9;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search-section .search-form button:hover {
+  background-color: #4553a0;
+}
+
+.social-section .social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.social-section .social-link {
+  margin: 0 10px;
+}
+
+.social-section .social-link img {
+  width: 40px;
+  height: 40px;
+}
+
+.social-section .contact-info {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.social-section .contact-info p {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+footer p {
+  font-size: 14px;
+  color: #aaa;
+}
