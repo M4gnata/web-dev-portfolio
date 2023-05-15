@@ -35,7 +35,6 @@ body {
 }
 
 .container .title.afinado {
-  background-image: url(./img/beat.png);
   background-size: cover;
   background-position: center;
   text-indent: -9999px; /* Oculta o texto do elemento */

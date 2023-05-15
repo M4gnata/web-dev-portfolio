@@ -96,9 +96,7 @@ window.addEventListener('DOMContentLoaded', function() {
   // Adicione o elemento <nav> ao início do body
   document.body.insertBefore(nav, document.body.firstChild);
 
-  // Obtém o elemento do logo
-  const logo = document.getElementById('logoImg');
-
+  
   // Define uma função para adicionar a classe de animação
   // Define uma função para adicionar a classe de animação
   function adicionarAnimacao() {
