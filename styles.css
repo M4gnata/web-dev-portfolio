@@ -9,8 +9,8 @@
 
 body {
   background-image: url('./img/fundo.jpg');
-  background-size: cover; /* ajusta o tamanho da imagem para cobrir todo o fundo */
-  background-position: center; /* centraliza a imagem no fundo */
+  background-size: cover;
+  background-position: center;
   font-family: Arial, sans-serif;
   background-color: #111;
   color: #dff800;
@@ -23,37 +23,53 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative; /* Adiciona posicionamento relativo ao container */
 }
 
-.container .title {
-  font-size: 1px;
+.container .title-centered {
+  font-size: 50px;
   text-align: center;
-  border-radius: 1px;
-  padding: 0.5px;
-  margin-top: 0.5px;
+  border-radius: 50px;
+  padding: 1px;
+  margin-top: 6px;
   font-family: 'Comic Zine OT', sans-serif;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Defina a largura total */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.container .title.afinado {
+
+
+.container .title-centered .title.afinado {
   background-size: cover;
   background-position: center;
   text-indent: -9999px; /* Oculta o texto do elemento */
   transform: scale(0.5); /* Aumenta o tamanho da imagem em 2 vezes */
-  width: 800px; /* Defina a largura desejada para o elemento */
-  height: 200px; /* Defina a altura desejada para o elemento */
+  width: 40px; /* Defina a largura desejada para o elemento */
+  height: 80px; /* Defina a altura desejada para o elemento */
+  position: relative;
 }
 
-.container .logo {
-  display: flex;
-  flex-direction: column;
+.container .title-centered .floating-letter {
+  position: relative;
+  animation: floatAnimation 1s ease-in-out infinite;
+  width: auto; /* Altere para "auto" para que a largura seja definida pelo conteúdo */
+  height: 150px; /* Mantenha a altura */
+  display: flex; /* Altere para "flex" */
   align-items: center;
-  margin-top: -50px; /* Ajuste a margem superior para aproximar o logo */
-  margin-bottom: 10px; /* Ajuste a margem inferior conforme necessário */
+  justify-content: flex-start; /* Altere para "flex-start" para alinhar à esquerda */
+  margin: 10px; /* Ajuste as margens conforme necessário */
 }
 
-.container .logo img {
-  width: 200px;
-  height: auto;
+
+.container .title-centered .floating-letter img {
+  width: auto; /* Altere para "auto" para que a largura seja definida pelo conteúdo */
+  height: 100%;
 }
 
 nav ul {
@@ -61,13 +77,13 @@ nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 500px;
   padding: 0;
 }
 
 nav ul li {
   display: inline;
-  margin-right: 10px;
+  margin-right: 100px;
 }
 
 nav ul li a {
@@ -113,20 +129,27 @@ main {
   flex-grow: 1;
 }
 
+.logo img {
+  width: 400px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  align-items: center;
+}
+
 .logo {
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
-}
-.logo {
-  position: relative;
+  margin-top: 200px; /* Ajuste a margem superior para aproximar o logo */
+  position: absolute; /* Adiciona posicionamento absoluto */
+  top: -50px; /* Ajusta a distância do topo */
+  left: 35%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  transition: transform 0.3s ease-in-out;
   animation: floatAnimation 3s ease-in-out infinite;
 }
-.container .logo .title.afinado img.floating-letter {
-  position: absolute;
-  animation: floatAnimation 3s ease-in-out infinite;
-}
+
 @keyframes floatAnimation {
   0% {
     transform: translateY(0);
@@ -139,21 +162,11 @@ main {
   }
 }
 
-
-.logo img {
-  width: 100px;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-}
-
-
-
-
 .search-section h2,
 .social-section h2 {
   height: auto;
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 40px;
 }
 
 .search-section .search-form {
@@ -166,7 +179,7 @@ main {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  width: 200px;
+  width: 400px;
 }
 
 .search-section .search-form button {
@@ -182,30 +195,9 @@ main {
   background-color: #4553a0;
 }
 
-.social-section .social-links {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
-
-.social-section .social-link {
-  margin: 0 10px;
-}
-
-.social-section .social-link img {
-  width: 40px;
-  height: 40px;
-}
-
-.social-section .contact-info {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.social-section .contact-info p {
-  margin-bottom: 0;
-  font-size: 14px;
-  color: #aaa;
+.social-section {
+  margin-top: 300px; /* Adicione uma margem superior para separar da seção anterior */
+  margin-bottom: 10px; /* Reduza a margem inferior para evitar muito espaço em branco */
 }
 
 footer {
@@ -216,10 +208,46 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 50px; /* Adicione uma margem superior para separar da seção social */
 }
+
+.social-section .social-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.social-section .social-link {
+  margin: 0 10px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.social-section .social-link img {
+  width: 40px;
+  height: 40px;
+}
+
+.social-section .contact-info {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.social-section .contact-info p {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
 
 footer p {
   font-size: 14px;
   color: #aaa;
 }
+
+
+
+
+
 
