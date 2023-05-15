@@ -1,7 +1,5 @@
 /* CSS Licenciado : Lucas Silva Gomes 15198398713*/
 
-/* CSS Licenciado : Lucas Silva Gomes 15198398713*/
-
 /* Reset styles */
 * {
   margin: 0;
@@ -60,7 +58,9 @@ body {
 
 nav ul {
   list-style: none;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 5px;
   padding: 0;
 }
@@ -107,6 +107,7 @@ nav ul li a:hover::before {
   width: 100%;
 }
 
+
 main {
   padding: 20px;
   flex-grow: 1;
@@ -122,7 +123,10 @@ main {
   position: relative;
   animation: floatAnimation 3s ease-in-out infinite;
 }
-
+.container .logo .title.afinado img.floating-letter {
+  position: absolute;
+  animation: floatAnimation 3s ease-in-out infinite;
+}
 @keyframes floatAnimation {
   0% {
     transform: translateY(0);
@@ -218,3 +222,4 @@ footer p {
   font-size: 14px;
   color: #aaa;
 }
+
